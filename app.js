@@ -141,8 +141,8 @@ console.log('******************* Section 4 *******************');
 // ************************************************************************
 
 // ************** Section 5 - File System Module (folders) ****************
-console.log('******************* Section 4 *******************');
-const fs = require('fs')
+// console.log('******************* Section 4 *******************');
+// const fs = require('fs')
 
 // create directory
 // fs.mkdir('tutorial', (err) => {
@@ -221,3 +221,50 @@ const fs = require('fs')
 
 
 // ************************************************************************
+
+// ************* Section 6 - Readable and Writeable Streams ***************
+// const fs = require('fs');
+// const readStream = fs.createReadStream('./example.txt', 'utf8');
+// const writeStream = fs.createWriteStream('example2.txt');
+// readStream.on('data', (chunk)=>{
+//     console.log(chunk);
+//     writeStream.write(chunk)
+// })
+
+// ************************************************************************
+
+
+// ************* Section 7 - Why You Should Use Streams *******************
+
+// Smaller buffer --> file read in chunks
+// readfile uses full buffer
+
+
+// ************************************************************************
+
+
+// ************* Section 8 - Pipes and Pipe Chaining ***************
+
+const fs = require('fs');
+
+// const readStream = fs.createReadStream('./example.txt', 'utf8');
+// const writeStream = fs.createWriteStream('example3.txt');
+// readStream.pipe(writeStream)
+
+const zlib = require('zlib');
+
+// const gzip = zlib.createGzip();
+// const readStream = fs.createReadStream('./example.txt', 'utf8');
+// const writeStream = fs.createWriteStream('example4.txt.gz');
+// readStream.pipe(gzip).pipe(writeStream)
+
+const gunzip = zlib.createGunzip();
+const readStream = fs.createReadStream('./example4.txt.gz');
+const writeStream = fs.createWriteStream('uncompressed.txt');
+readStream.pipe(gunzip).pipe(writeStream)
+
+
+// ************************************************************************
+
+
+// ************* Section 6 - Readable and Writeable Streams ***************
