@@ -93,7 +93,7 @@ console.log('******************* Section 3 *******************');
 
 // ******************** Section 4 - File System Module ********************
 console.log('******************* Section 4 *******************');
-const fs = require('fs');
+// const fs = require('fs');
 
 // create file
 // fs.writeFile('example.txt', "this is an example", (err)=>{
@@ -130,18 +130,94 @@ const fs = require('fs');
 // });
 
 // Delete file
-fs.unlink('example2.txt', (err)=>{
-    if(err) {
-        console.log(err);
-    } else {
-        console.log('Succesfuly deleted file');
-    }
-})
+// fs.unlink('example2.txt', (err)=>{
+//     if(err) {
+//         console.log(err);
+//     } else {
+//         console.log('Succesfuly deleted file');
+//     }
+// })
 
 // ************************************************************************
 
 // ************** Section 5 - File System Module (folders) ****************
 console.log('******************* Section 4 *******************');
+const fs = require('fs')
+
+// create directory
+// fs.mkdir('tutorial', (err) => {
+//     if(err){
+//         console.log(err);
+//     } else {
+//         console.log('folder created');
+//     }
+// })
+
+// remove directory
+// fs.rmdir('tutorial', (err) => {
+//     if(err){
+//         console.log(err);
+//     } else {
+//         console.log('folder removed');
+//     }
+// })
+
+//create new directory and new file within new directory
+// create directory
+// fs.mkdir('tutorial', (err) => {
+//     if(err){
+//         console.log(err);
+//     } else {
+//         fs.writeFile('./tutorial/example.txt', '123', (err)=>{
+//             if(err) {
+//                 console.log(err);
+//             } else {
+//                 console.log('successfully created file');
+//             }
+//         })
+//     }
+// })
+
+
+// delete folder containing one file
+// fs.unlink('./tutorial/example.txt', (err)=>{
+//     if(err) {
+//         console.log(err);
+//     } else {
+//         fs.rmdir('tutorial', (err) => {
+//             if(err){
+//                 console.log(err);
+//             } else {
+//                 console.log('folder removed');
+//             }
+//         })
+//     }
+// })
+
+//delete folder containing multiple files (folder/files created in GUI)
+// fs.readdir('example', (err, files)=>{
+//     if(err) {
+//         console.log(err)
+//     }  else {
+//         console.log(files)
+//         for(let file of files) {
+//             fs.unlink('./example/' + file, (err)=>{
+//                 if(err){
+//                     console.log(err);
+//                 } else {
+//                     console.log(file + ' was removed');
+//                 }
+//             })
+//         }
+//         fs.rmdir('example', (err) => {
+//             if(err){
+//                 console.log(err);
+//             } else {
+//                 console.log('folder removed');
+//             }
+//         })
+//     }
+// })
 
 
 // ************************************************************************
