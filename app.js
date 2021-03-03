@@ -245,26 +245,32 @@ console.log('******************* Section 4 *******************');
 
 // ************* Section 8 - Pipes and Pipe Chaining ***************
 
-const fs = require('fs');
+// const fs = require('fs');
 
 // const readStream = fs.createReadStream('./example.txt', 'utf8');
 // const writeStream = fs.createWriteStream('example3.txt');
 // readStream.pipe(writeStream)
 
-const zlib = require('zlib');
+// const zlib = require('zlib');
 
 // const gzip = zlib.createGzip();
 // const readStream = fs.createReadStream('./example.txt', 'utf8');
 // const writeStream = fs.createWriteStream('example4.txt.gz');
 // readStream.pipe(gzip).pipe(writeStream)
 
-const gunzip = zlib.createGunzip();
-const readStream = fs.createReadStream('./example4.txt.gz');
-const writeStream = fs.createWriteStream('uncompressed.txt');
-readStream.pipe(gunzip).pipe(writeStream)
+// const gunzip = zlib.createGunzip();
+// const readStream = fs.createReadStream('./example4.txt.gz');
+// const writeStream = fs.createWriteStream('uncompressed.txt');
+// readStream.pipe(gunzip).pipe(writeStream)
 
 
 // ************************************************************************
 
 
-// ************* Section 6 - Readable and Writeable Streams ***************
+// *********************** Section 9 - HTTP Server ************************
+
+
+
+
+
+// ************************************************************************
